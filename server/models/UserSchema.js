@@ -2,27 +2,27 @@
 module.exports = (sequelize, DataTypes) => {
   const Roommate = sequelize.define('Roommate', {
     username: {
-      type: sequelize.STRING,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     firstName: {
-      type: sequelize.STRING,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     lastName: DataTypes.STRING,
     email: {
-      type: sequelize.STRING,
+      type: DataTypes.STRING,
       allowNull: false,
       isEmail: true
     },
     password: {
-      type: sequelize.STRING,
+      type: DataTypes.STRING,
       allowNull: false,
       isAlphanumeric: true, 
     },
     houseName: DataTypes.STRING, 
     active: {
-      type:sequelize.BOOLEAN,
+      type:DataTypes.BOOLEAN,
       is: true
     },
     dateAdded:DataTypes.DATE

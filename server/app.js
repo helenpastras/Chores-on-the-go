@@ -1,13 +1,24 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+// require("dotenv").config();
+const createError = require('http-errors');
+const express = require('express');
+// const session = require("express-session");
+// const moment = require('moment');
+// const env = require('dotenv').load();
+const path = require('path');
+const bodyParser = require("body-parser");
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+const indexRouter = require('./routes/index');
+const usersRouter = require('./routes/users');
 
-var app = express();
+const app = express();
+
+
+const PORT = process.env.PORT || 3000;
+
+//Models
+const db = require("./models");
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -38,4 +49,22 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+const syncOptions = { force: false };
+// If running a test, set syncOptions.force to true
+// clearing the `testdb`
+if (process.env.NODE_ENV === "test") {
+  syncOptions.force = true;
+}
+
+// Starting the server, syncing our models ------------------------------------/
+db.sequelize.sync(syncOptions).then(function() {
+  app.listen(PORT, function() {
+    console.log(
+      "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
+      PORT,
+      PORT
+    );
+  });
+});
+// Sync Database
 module.exports = app;
