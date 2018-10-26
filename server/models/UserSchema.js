@@ -30,7 +30,7 @@ module.exports = (sequelize, DataTypes) => {
   {});
   Roommate.associate = function(models) {
 
-    models.Chores.belongsTo(Roomate)
+    models.Chores.belongsTo(Roommate)
 
     
     // associations can be defined here

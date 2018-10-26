@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "password",
-    "database": "roommateChores",
+    "database": "roommateChores_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
@@ -16,7 +16,7 @@
   "production": {
     "username": "root",
     "password": null,
-    "database": "roommateChores",
+    "database": "roommateChores_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   }

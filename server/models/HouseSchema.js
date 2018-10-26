@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   House.associate = function(models) {
     // associations can be defined here
-    models.Roomate.belongsTo(House)
+    models.Roommate.belongsTo(House)
   };
   return House;
 };
