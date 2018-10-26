@@ -7,8 +7,8 @@ module.exports = {
         houseAdmin: 'Anna',
         createdAt: '20180908',
         updatedAt: '20181008'
-      }], 
-      [{
+      }, 
+      {
         houseName: '14060Marquesas',
         houseAdmin: 'Nick',
         createdAt: '20180908',

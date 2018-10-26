@@ -12,8 +12,8 @@ module.exports = {
       description: 'Wash dishes and clean the drying rack and sink after',
       createdAt: '20181008',
       updatedAt: '20181008'
-      }], 
-    [{
+      }, 
+    {
       choreName: 'vacuum house',
       choreRoom: 'entire house',
       assignee: 'Anna',
@@ -23,8 +23,8 @@ module.exports = {
       description: 'Vacuum the floors, entire apt',
       createdAt: '20181010',
       updatedAt: '20181010'
-      }], 
-    [{
+      }, 
+    {
       choreName: 'clean main bathroom',
       choreRoom: 'main bathroom',
       assignee: 'Nick',
