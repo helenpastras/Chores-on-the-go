@@ -1,9 +1,6 @@
 // require("dotenv").config();
 const createError = require('http-errors');
 const express = require('express');
-// const session = require("express-session");
-// const moment = require('moment');
-// const env = require('dotenv').load();
 const path = require('path');
 const bodyParser = require("body-parser");
 const cookieParser = require('cookie-parser');
