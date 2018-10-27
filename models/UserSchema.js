@@ -28,6 +28,37 @@ module.exports = (sequelize, DataTypes) => {
     dateAdded:DataTypes.DATE
   }, 
   {});
+
+    // Class methods for use in passport
+    Roommate.authenticate = function(username, password, done) {
+      console.log('hi from authenticate');
+      console.log(username, password);
+  
+      Roommate.findOne({ where: {username: username} }).then(function(user) {
+        if (!user) { return done(null, false); }
+        if (user.password !== password) { return done(null, false); }
+        console.log('we found a Roommate, ', Roommate);
+        return done(null, user);
+      }).catch(function(err) {
+        return done(err);
+      });
+    };
+  
+    Roommate.serializeUser = function(user, done) {
+      console.log('hi from serializeUser');
+      done(null, user.id);
+    };
+  
+    Roommate.deserializeUser = function(id, done) {
+      console.log('hi from deserializeUser');
+      Roommate.findOne({ where: {id: id} }).then(function(Roommate){
+        console.log('found user in deserializeUser');
+        done(null, Roommate);
+      }).catch(function(err) {
+        done(err);
+      });
+    };
+  
   Roommate.associate = function(models) {
 
     models.Chores.belongsTo(Roommate)
