@@ -21,7 +21,8 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   Chores.associate = function(models) {
     // associations can be defined here
-    
+    models.Roommates.hasMany(Chores)
+
   };
   return Chores;
 };

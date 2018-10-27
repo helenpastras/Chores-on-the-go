@@ -1,6 +1,6 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  const Roommate = sequelize.define('Roommate', {
+  const Roommates = sequelize.define('Roommates', {
     username: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -28,12 +28,12 @@ module.exports = (sequelize, DataTypes) => {
     dateAdded:DataTypes.DATE
   }, 
   {});
-  Roommate.associate = function(models) {
+  Roommates.associate = function(models) {
 
-    models.Chores.belongsTo(Roommate)
+    models.Chores.belongsTo(Roommates),
+    models.Houses.hasMany(Roommates)
 
-    
     // associations can be defined here
   };
-  return Roommate;
+  return Roommates;
 };
