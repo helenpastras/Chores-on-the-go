@@ -4,7 +4,7 @@ import AppBar from 'material-ui/AppBar';
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
 import axios from 'axios';
-class Register extends Component {
+class profile extends Component {
   constructor(props){
     super(props);
     this.state={
@@ -20,7 +20,7 @@ class Register extends Component {
         <MuiThemeProvider>
           <div>
           <AppBar
-             title="Register"
+             title="profile"
            />
            <TextField
              hintText="Enter your First Name"
@@ -58,4 +58,4 @@ class Register extends Component {
 const style = {
   margin: 15,
 };
-export default Register;
+export default profile;
