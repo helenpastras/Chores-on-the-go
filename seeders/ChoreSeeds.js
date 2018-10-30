@@ -11,7 +11,8 @@ module.exports = {
       // dateCompleted: 'NULL',
       description: 'Wash dishes and clean the drying rack and sink after',
       createdAt: '20181008',
-      updatedAt: '20181008'
+      updatedAt: '20181008',
+      RoommateId: 1
       }, 
     {
       choreName: 'vacuum house',
