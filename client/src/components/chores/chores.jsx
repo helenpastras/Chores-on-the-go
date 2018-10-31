@@ -4,9 +4,8 @@ import moment from "moment";
 
 import deleteButton from "../../components/deleteButton";
 import updateButton from "../../components/updateButton";
-import ChoresModal from "./choresModal";
+import ChoresModal from "./chores";
 import { Container, Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Label } from 'reactstrap'
-import { Input } from "./input";
 
 import routes from "server/client/src/components/routes";
 import "./chores.css";
