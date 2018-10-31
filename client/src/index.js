@@ -17,20 +17,18 @@ import App from './App'
 //import Recipe from "./components/Recipe/SearchResultContainer"
 import './index.css';
 import Basic from "./chores/chores";
-//import Todo from "./components/List/TodoContainer";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import chores from './components/chores/chores';
 
 ReactDOM.render(
 	<div className="App" style={{ display: 'flex', alignItems: 'stretch' }}>
-		<X />
+		{/* <X /> */}
 			<Router>
 				<div>
 					<Switch>
 						<Route exact path="/" component={App} />
 						<Route exact path="/chores" component={chores} />
-						<Route exact path="/lists" component={Todo} />
           				<Route component={App} />
 					</Switch>
 				</div>

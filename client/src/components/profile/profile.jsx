@@ -4,7 +4,8 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AppBar from 'material-ui/AppBar';
 import TextField from 'material-ui/TextField';
 import axios from 'axios';
-class profile extends Component {
+
+class Profile extends Component {
   constructor(props){
     super(props);
     this.state={
@@ -48,7 +49,7 @@ class profile extends Component {
              onChange = {(chores,newValue) => this.setState({password:newValue})}
              />
            <br/>
-           <RaisedButton label="Submit" primary={true} style={style} onClick={(chores) => this.handleClick(chores)}/>
+           <profile label="Submit" primary={true} style={style} onClick={(chores) => this.handleClick(chores)}/>
           </div>
          </MuiThemeProvider>
       </div>
@@ -58,4 +59,4 @@ class profile extends Component {
 const style = {
   margin: 15,
 };
-export default profile;
+export default Profile;
