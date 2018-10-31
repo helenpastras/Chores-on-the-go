@@ -2,9 +2,8 @@ import React from 'react';
 import BigCalendar from 'react-big-calendar';
 import moment from "moment";
 
-import deleteButton from "../../components/deleteButton";
-import updateButton from "../../components/updateButton";
-import ChoresModal from "./choresModal";
+//import updateButton from "../../components/updateButton";
+// import ChoresModal from "./chores";
 import { Container, Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Label } from 'reactstrap'
 import { Input } from "./input";
 
@@ -17,7 +16,7 @@ BigCalendar.momentLocalizer(moment);
 
 let allViews = Object.keys(BigCalendar.Views).map(k => BigCalendar.Views[k])
 
-class Basic extends React.Component {
+class chores extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -166,7 +165,7 @@ class Basic extends React.Component {
                         )
                     }
                 />
-                <ChoresModal />
+                {/* <Chores /> */}
 
                 <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
                     <ModalHeader toggle={this.toggle}>{this.state.title}</ModalHeader>

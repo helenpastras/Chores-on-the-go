@@ -12,7 +12,7 @@
  //   .then(response => {
  //       console.log(response);
  //       if (response.data) {
- //           console.log('successful signup');
+ //           console.log('successful SignUp');
   //          this.setState({
  //               redirectTO: '/login'
   //          })
@@ -31,7 +31,7 @@ import { Redirect } from 'react-router-dom'
 import "./sign-up.css";
 import { Container, Row, Col } from 'reactstrap';
 
-class SignupForm extends Component {
+class SignUp extends Component {
 	constructor() {
 		super()
 		this.state = {
@@ -112,5 +112,5 @@ class SignupForm extends Component {
 				}
 			}
 			
-			export default Sign-up;
+			export default SignUp;
 
