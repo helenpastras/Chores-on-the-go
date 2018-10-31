@@ -1,22 +1,20 @@
 import React from 'react';
 import BigCalendar from 'react-big-calendar';
 import moment from "moment";
+//import routes from "../../route/choresRoutes";
 
-import deleteButton from "../../components/deleteButton";
-import updateButton from "../../components/updateButton";
-import ChoresModal from "./chores";
+//import updateButton from "../../components/updateButton";
+// import ChoresModal from "./chores";
 import { Container, Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Label } from 'reactstrap'
-
-import routes from "server/client/src/components/routes";
 import "./chores.css";
-
+//import routes from "../components/routes"
 import axios from "axios";
 
 BigCalendar.momentLocalizer(moment);
 
 let allViews = Object.keys(BigCalendar.Views).map(k => BigCalendar.Views[k])
 
-class Basic extends React.Component {
+class chores extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -79,7 +77,7 @@ class Basic extends React.Component {
         })
     }
 
-    handleInputChange = chores => {
+    handlechoresChange = chores => {
         const { name, value } = chores.target;
         this.setState({
             [name]: value
@@ -99,7 +97,7 @@ class Basic extends React.Component {
     };
 
     updateModal = (id) => {
-        routes.getChores(id)
+        chores.getChores(id)
             .then(res => {
                 console.log(res.data)
                 var makeStart = res.data.start.split(" ");
@@ -126,7 +124,7 @@ class Basic extends React.Component {
 
     deleteChore = id => {
         console.log(this.state.id)
-        routes.deleteChore(id)
+        chores.deleteChore(id)
             .then(console.log("success"))
             .catch(err => console.log(err));
     };
@@ -139,7 +137,7 @@ class Basic extends React.Component {
             description: this.state.description
         }
         console.log(id, updatedChore)
-        routes.updatedChore(id, updatedChore)
+        chores.updatedChore(id, updatedChore)
             .then(console.log("successfully updated"))
             .catch(err => console.log(err))
     }
@@ -165,7 +163,7 @@ class Basic extends React.Component {
                         )
                     }
                 />
-                <ChoresModal />
+                {/* <Chores /> */}
 
                 <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
                     <ModalHeader toggle={this.toggle}>{this.state.title}</ModalHeader>
@@ -179,17 +177,17 @@ class Basic extends React.Component {
                                 <Form>
                                     <FormGroup>
                                         <Label for="title">Chore Title</Label>
-                                        <Input
+                                        <chores
                                             value={this.state.title}
-                                            onChange={this.handleInputChange}
+                                            onChange={this.handlechoresChange}
                                             name="title"
                                             placeholder="What are you up to?" />
                                     </FormGroup>
                                     <FormGroup>
                                         <Label for="description">Chore Description </Label>
-                                        <Input
+                                        <chores
                                             value={this.state.description}
-                                            onChange={this.handleInputChange}
+                                            onChange={this.handlechoresChange}
                                             name="description"
                                             placeholder="Tell me more." />
                                     </FormGroup>
@@ -198,9 +196,9 @@ class Basic extends React.Component {
                                         <div className="col-sm">
                                             <FormGroup>
                                                 <Label for="startYear">Year </Label>
-                                                <Input
+                                                <chores
                                                     value={this.state.startYear}
-                                                    onChange={this.handleInputChange}
+                                                    onChange={this.handlechoresChange}
                                                     name="startYear"
                                                     placeholder="YYYY" />
                                             </FormGroup>
@@ -208,9 +206,9 @@ class Basic extends React.Component {
                                         <div className="col-sm">
                                             <FormGroup>
                                                 <Label for="startMonth">Month </Label>
-                                                <Input
+                                                <chores
                                                     value={this.state.startMonth}
-                                                    onChange={this.handleInputChange}
+                                                    onChange={this.handlechoresChange}
                                                     name="startMonth"
                                                     placeholder="MM" />
                                             </FormGroup>
@@ -220,9 +218,9 @@ class Basic extends React.Component {
                                         <div className="col-sm">
                                             <FormGroup>
                                                 <Label for="startDate">Date </Label>
-                                                <Input
+                                                <chores
                                                     value={this.state.startDay}
-                                                    onChange={this.handleInputChange}
+                                                    onChange={this.handlechoresChange}
                                                     name="startDay"
                                                     placeholder="DD" />
                                             </FormGroup>
@@ -230,9 +228,9 @@ class Basic extends React.Component {
                                         <div className="col-sm">
                                             <FormGroup>
                                                 <Label for="startTime">Time </Label>
-                                                <Input
+                                                <chores
                                                     value={this.state.startTime}
-                                                    onChange={this.handleInputChange}
+                                                    onChange={this.handlechoresChange}
                                                     name="startTime"
                                                     placeholder="HH:MM (military time)" />
                                             </FormGroup>
@@ -243,9 +241,9 @@ class Basic extends React.Component {
                                         <div className="col-sm">
                                             <FormGroup>
                                                 <Label for="endYear">Year </Label>
-                                                <Input
+                                                <chores
                                                     value={this.state.endYear}
-                                                    onChange={this.handleInputChange}
+                                                    onChange={this.handlechoresChange}
                                                     name="endYear"
                                                     placeholder="YYYY" />
                                             </FormGroup>
@@ -253,9 +251,9 @@ class Basic extends React.Component {
                                         <div className="col-sm">
                                             <FormGroup>
                                                 <Label for="endMonth">Month </Label>
-                                                <Input
+                                                <chores
                                                     value={this.state.endMonth}
-                                                    onChange={this.handleInputChange}
+                                                    onChange={this.handlechoresChange}
                                                     name="endMonth"
                                                     placeholder="MM" />
                                             </FormGroup>
@@ -265,9 +263,9 @@ class Basic extends React.Component {
                                         <div className="col-sm">
                                             <FormGroup>
                                                 <Label for="endDate">Date </Label>
-                                                <Input
+                                                <chores
                                                     value={this.state.endDay}
-                                                    onChange={this.handleInputChange}
+                                                    onChange={this.handlechoresChange}
                                                     name="endDay"
                                                     placeholder="DD" />
                                             </FormGroup>
@@ -275,9 +273,9 @@ class Basic extends React.Component {
                                         <div className="col-sm">
                                             <FormGroup>
                                                 <Label for="endTime">Time </Label>
-                                                <Input
+                                                <chores
                                                     value={this.state.endTime}
-                                                    onChange={this.handleInputChange}
+                                                    onChange={this.handlechoresChange}
                                                     name="endTime"
                                                     placeholder="HH:MM (military time)" />
                                             </FormGroup>

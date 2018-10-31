@@ -1,40 +1,11 @@
-//import React, { Component } from 'react';
-//import logo from './logo.svg';
-//import './App.css';
-
-//class App extends Component {
-  //render() {
-    //return (
-      //<div className="App">
-        //<header className="App-header">
-        //  <img src={logo} className="App-logo" alt="logo" />
-        //  <p>
-        //    Edit <code>src/App.js</code> and save to reload.
-        //  </p>
-      //    <a
-      //      className="App-link"
-       //     href="https://reactjs.org"
-       //     target="_blank"
-      //      rel="noopener noreferrer"
-       //   >
-        //    Learn React
-      //    </a>
-    //    </header>
-  //    </div>
- //   );
-//  }
-//}
-//export default App;
-
-
-import React, { Component } from 'react'
-import axios from 'axios'
-import { Route } from 'react-router-dom'
-import './App.css'
-import logo from "./components/Nav/logo.jpeg";
-import LoginForm from './components/log-in/Log-in'
-import signup from './components/sign-up'
-import profile from './components/profile'
+import React, { Component } from 'react';
+import axios from 'axios';
+import { Route } from 'react-router-dom';
+import './App.css';
+import logo from "./components/nav/logo.jpeg";
+import LoginForm from './components/log-in/log-in';
+import SignUp from './components/sign-up';
+import profile from './components/profile';
 import { Row, Col, Nav, NavItem } from 'reactstrap';
 import styled from 'styled-components';
 
@@ -183,7 +154,7 @@ class App extends Component {
 							/>
 						</Col>
 						<Col>
-							<Route exact path="/sign-up" component={Sign-up} />
+							<Route exact path="/sign-up" component={SignUp} />
 						</Col>
 					</Row>
 				</Jumbotron>
@@ -191,6 +162,5 @@ class App extends Component {
 		)
 	}
 }
-
 
 export default App;

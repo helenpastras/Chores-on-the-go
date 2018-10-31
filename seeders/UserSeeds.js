@@ -12,8 +12,8 @@ module.exports = {
           houseName: '4414Kinross',
           dateAdded: '20180509',
           createdAt: '20180509',
-          updatedAt: '20171002'
-
+          updatedAt: '20171002',
+          HouseId: 1
         },
         {
           username: 'Anna',
@@ -24,7 +24,8 @@ module.exports = {
           houseName: '4414Kinross',
           dateAdded: '20180402',
           createdAt: '20180402',
-          updatedAt: '20171002'
+          updatedAt: '20171002',
+          HouseId: 1
         },
         {
           username: 'nikko',
@@ -35,7 +36,8 @@ module.exports = {
           houseName: '14060Marquesas',
           dateAdded: '20171002',
           createdAt: '20171002',
-          updatedAt: '20171002'
+          updatedAt: '20171002',
+          HouseId: 6
         }
       ], {});
   },

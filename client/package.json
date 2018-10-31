@@ -2,7 +2,9 @@
   "name": "chores-on-the-go",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://helenpastras.github.io/Chores-on-the-go/",
   "dependencies": {
+    "axios": "^0.18.0",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
     "react-scripts": "2.0.5"
@@ -13,7 +15,6 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -22,5 +23,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "@babel/preset-react": "^7.0.0"
+  }
 }
