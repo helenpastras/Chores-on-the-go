@@ -5,13 +5,13 @@ const path = require('path');
 
 
 // API Routes
-router.use(require("./routes/choresRoutes"));
-router.use(require("./routes/houseRoutes"));
-router.use(require("./routes/usersRoutes"));
+router.use(require("../routes/choresRoutes"));
+router.use(require("../routes/houseRoutes"));
+router.use(require("../routes/usersRoutes"));
 
 // Auth and HTML Routes
-router.use(require("./routes/authRoutes"));
-router.use(require("./routes/htmlRoutes"));
+router.use(require("../routes/authRoutes"));
+router.use(require("../routes/htmlRoutes"));
 router.use(function(req, res, next) {
   res.render("404");
 });

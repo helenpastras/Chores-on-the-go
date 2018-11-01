@@ -8,6 +8,7 @@ import SignUp from './components/sign-up';
 import profile from './components/profile';
 import { Row, Col, Nav, NavItem } from 'reactstrap';
 import styled from 'styled-components';
+import chores from "./components/chores";
 
 const DisplayLinks = props => {
 	const NavLink = styled.a`

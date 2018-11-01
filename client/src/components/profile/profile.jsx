@@ -4,7 +4,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 //import AppBar from 'material-ui/AppBar';
 import TextField from 'material-ui/TextField';
 import axios from 'axios';
-import AutoComplete from 'material-ui/AutoComplete';
+import profile from 'material-ui/AutoComplete';
 
 class Profile extends Component {
   constructor(props){
