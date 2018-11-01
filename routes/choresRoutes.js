@@ -2,6 +2,7 @@
 const db = require("../models");
 const express = require('express');
 const app = express.Router();
+var Router = require('../routes');
 
 // Get all the Chores for the Roommate's House: 
 app.get("/api/chores", function (req, res) {

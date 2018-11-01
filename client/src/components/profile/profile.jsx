@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import profile from 'profile.css'
+import './profile.css'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import AppBar from 'material-ui/AppBar';
+//import AppBar from 'material-ui/AppBar';
 import TextField from 'material-ui/TextField';
 import axios from 'axios';
+import profile from 'material-ui/AutoComplete';
 
 class Profile extends Component {
   constructor(props){
@@ -20,7 +21,7 @@ class Profile extends Component {
       <div>
         <MuiThemeProvider>
           <div>
-          <AppBar
+          <TextField
              title="profile"
            />
            <TextField

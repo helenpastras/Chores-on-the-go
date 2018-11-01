@@ -16,10 +16,9 @@ import ReactDOM from 'react-dom'
 import App from './App'
 //import Recipe from "./components/Recipe/SearchResultContainer"
 import './index.css';
-import Basic from "./chores/chores";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import chores from './components/chores/chores';
+import chores from './components/chores';
 
 ReactDOM.render(
 	<div className="App" style={{ display: 'flex', alignItems: 'stretch' }}>

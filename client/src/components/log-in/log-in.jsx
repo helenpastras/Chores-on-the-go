@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
 import { Container, Row, Col } from 'reactstrap';
-import "./Log-in.css";
+import "./log-in.css";
 import axios from 'axios'
 
-class LoginForm extends Component {
+class Login extends Component {
 	constructor() {
 		super()
 		this.state = {
@@ -73,4 +73,4 @@ class LoginForm extends Component {
 	}
 }
 
-export default LoginForm
+export default Login

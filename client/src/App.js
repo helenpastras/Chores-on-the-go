@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Route } from 'react-router-dom';
 import './App.css';
-import logo from "./components/Nav/logo.jpeg";
-import LoginForm from './components/log-in/Log-in';
+import logo from "./components/nav/logo.jpeg";
+import LoginForm from './components/log-in/log-in';
 import SignUp from './components/sign-up';
 import profile from './components/profile';
 import { Row, Col, Nav, NavItem } from 'reactstrap';
 import styled from 'styled-components';
+import chores from "./components/chores";
 
 const DisplayLinks = props => {
 	const NavLink = styled.a`
