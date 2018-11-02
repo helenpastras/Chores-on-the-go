@@ -8,7 +8,7 @@ var LocalStrategy = require('passport-local').Strategy;
 var db = require("./models");
 
 var app = express();
-var PORT = process.env.PORT || 3000;
+var PORT = process.env.PORT || 3001;
 
 // Middleware
 app.use(require('cookie-parser')());
