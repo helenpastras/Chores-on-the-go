@@ -31,7 +31,7 @@ import { Redirect } from 'react-router-dom'
 import "./sign-up.css";
 import { Container, Row, Col } from 'reactstrap';
 
-class SignUp extends Component {
+class SignupForm extends Component {
 	constructor() {
 		super()
 		this.state = {
@@ -52,7 +52,7 @@ class SignUp extends Component {
 		chores.preventDefault()
 		// TODO - validate!
 		axios
-			.post('/auth/sign-up', {
+			.post('/auth/register', {
 				username: this.state.username,
 				password: this.state.password
 			})
@@ -112,5 +112,5 @@ class SignUp extends Component {
 				}
 			}
 			
-			export default SignUp;
+			export default SignupForm;
 

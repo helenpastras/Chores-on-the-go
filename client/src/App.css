@@ -1,6 +1,9 @@
 .App {
   text-align: center;
 }
+.jumbotron {
+  background-color: teal;
+}
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;

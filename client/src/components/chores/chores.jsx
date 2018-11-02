@@ -2,9 +2,10 @@ import React from 'react';
 import BigCalendar from 'react-big-calendar';
 import moment from "moment";
 //import routes from "../../route/choresRoutes";
-
+//import deleteButton from "../../components/deleteButton";
+//import ChoresModal from "./ChoresModal";
 //import updateButton from "../../components/updateButton";
-// import ChoresModal from "./chores";
+import Chores from "./chores";
 import { Container, Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Label } from 'reactstrap'
 import "./chores.css";
 //import routes from "../components/routes"

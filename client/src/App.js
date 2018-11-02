@@ -136,8 +136,8 @@ class App extends Component {
 			<Container className="mainContainer">
 				<Jumbotron>
 				<img className="logoMain" src={logo} alt=""/>
-				<h4 className="welcomeText">Welcome to Chores On The Go!</h4>
-				<h7 className="welcomeText">Where You Can Manage Various Home Chores With Your Roommate</h7>
+				<h2 className="welcomeText">Welcome to Chores On The Go!</h2>
+				<h5 className="welcomeText">Where You Can Manage Various Home Chores With Your Roommate</h5>
 					<Row className="buttonRow">
 						<DisplayLinks _logout={this._logout} loggedIn={this.state.loggedIn} />
 					</Row>

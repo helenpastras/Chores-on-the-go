@@ -2,7 +2,7 @@ var db = require("../models");
 var express = require('express');
 var router = express.Router();
 var passport = require('passport');
-// var User = require('../models').User;
+//var user = require('../models').User;
 
 
 
