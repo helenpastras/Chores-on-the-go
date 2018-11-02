@@ -6,7 +6,6 @@ import SvgIcon from 'react-icons-kit';
 import { ic_event_note } from 'react-icons-kit/md/ic_event_note'
 import { ic_format_list_bulleted } from 'react-icons-kit/md/ic_format_list_bulleted';
 import { ic_people } from 'react-icons-kit/md/ic_people';
-import { spoonKnife } from 'react-icons-kit/icomoon/';
 
 import styled from 'styled-components';
 
@@ -48,10 +47,10 @@ const NavLink = styled.a`
 
 const BasicSideNav = () =>
     <SideNav highlightBgColor="#00bcd4" defaultSelected="events">
-        <Title> Home Planit </Title>
+        <Title> Chores On The Go </Title>
         <Nav id="events">
             <NavIcon><Icon20 icon={ic_event_note} /></NavIcon>
-            <NavLink href="/events"> Events </NavLink>
+            <NavLink href="/events"> Chores </NavLink>
         </Nav>
         <Nav id="lists">
             <Link to={"/lists"}>
@@ -59,10 +58,7 @@ const BasicSideNav = () =>
                 <NavLink href="/lists"> Lists </NavLink>
             </Link>
         </Nav>
-        <Nav id="recipes">
-            <NavIcon><Icon20 icon={spoonKnife} /></NavIcon>
-            <NavLink href="/recipes"> Recipes </NavLink>
-        </Nav>
+        
         <Nav id="members">
             <NavIcon><Icon20 icon={ic_people} /></NavIcon>
             <NavLink href="/members"> Members </NavLink>
