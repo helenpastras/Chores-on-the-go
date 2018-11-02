@@ -1,0 +1,9 @@
+.modal-content{
+    width: 700px;
+}
+
+.addBtn {
+    background-color: teal;
+    color: #fff;
+    margin-top: 10px;
+}
