@@ -36,6 +36,9 @@ class SignupForm extends Component {
 		super()
 		this.state = {
 			username: '',
+			email: '',
+			firstName: '',
+			houseName: '',
 			password: '',
 			confirmPassword: '',
 			redirectTo: null
@@ -53,7 +56,10 @@ class SignupForm extends Component {
 		// TODO - validate!
 		axios
 			.post('/auth/register', {
+				email: this.state.email,
 				username: this.state.username,
+				firstName: this.state.username,
+				houseName: this.state.username,
 				password: this.state.password
 			})
 			.then(response => {
