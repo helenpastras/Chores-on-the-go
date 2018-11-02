@@ -10,10 +10,11 @@ class Profile extends Component {
   constructor(props){
     super(props);
     this.state={
-      first_name:'',
-      last_name:'',
-      email:'',
-      password:''
+      email: '',
+				username: '',
+				firstName: '',
+				houseName: '',
+				password: ''
     }
   }
   render() {
@@ -25,15 +26,15 @@ class Profile extends Component {
              title="profile"
            />
            <TextField
-             hintText="Enter your First Name"
-             floatingLabelText="First Name"
-             onChange = {(chores,newValue) => this.setState({first_name:newValue})}
+             hintText="Enter your username"
+             floatingLabelText="username"
+             onChange = {(chores,newValue) => this.setState({username:newValue})}
              />
            <br/>
            <TextField
-             hintText="Enter your Last Name"
-             floatingLabelText="Last Name"
-             onChange = {(chores,newValue) => this.setState({last_name:newValue})}
+             hintText="Enter your firstName"
+             floatingLabelText="firstName"
+             onChange = {(chores,newValue) => this.setState({firstName:newValue})}
              />
            <br/>
            <TextField
@@ -48,6 +49,13 @@ class Profile extends Component {
              hintText="Enter your Password"
              floatingLabelText="Password"
              onChange = {(chores,newValue) => this.setState({password:newValue})}
+             />
+           <br/>
+           <TextField
+             type = "houseName"
+             hintText="Enter your houseName"
+             floatingLabelText="houseName"
+             onChange = {(chores,newValue) => this.setState({houseName:newValue})}
              />
            <br/>
            <profile label="Submit" primary={true} style={style} onClick={(chores) => this.handleClick(chores)}/>

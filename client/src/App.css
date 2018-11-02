@@ -1,5 +1,12 @@
 .App {
   text-align: center;
+
+}
+.log-in {
+  text-align: inherit;
+}
+.sign-up {
+  text-align: right;
 }
 .jumbotron {
   background-color: teal;
