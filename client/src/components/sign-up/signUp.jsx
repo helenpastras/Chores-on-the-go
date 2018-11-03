@@ -55,7 +55,7 @@ class SignupForm extends Component {
 		chores.preventDefault()
 		// TODO - validate!
 		axios
-			.post('/auth/register', {
+			.post('/register', {
 				email: this.state.email,
 				username: this.state.username,
 				firstName: this.state.username,
