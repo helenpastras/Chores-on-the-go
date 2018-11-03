@@ -1,1 +1,1 @@
-export { default } from "./ChoresModal.jsx";
+export { default } from "./chores.jsx";
