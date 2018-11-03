@@ -17,31 +17,31 @@ app.get("/api/user", function (req, res) {
   });
 });
 
-app.post("/auth/register", function (req, res) {
-  // Create a new Roommate in the database
-  db.Roommate.create(req.body)
-    .then(function (dbRoommate) {
-      // If a Roommate was created successfully, find one House  and push the new Roommate's _id to the House's `Roommates` array
-      // { new: true } tells the query that we want it to return the updated Houses -- it returns the original by default
-//( this is mongoose code, need to change it to sequelize)
-      // return db.Houses.findOneAndUpdate({}, {
-      //   $push: {
-      //     Roommate: dbRoommate._id
-      //   }
-      // }, {
-      //   new: true
-      // });
-      res.json(dbRoommate)
-    })
-    .then(function (dbHouses) {
-      // If the House was updated successfully, send it back to the client
-      res.json(dbHouses);
-    })
-    .catch(function (err) {
-      // If an error occurs, send it back to the client
-      res.json(err);
-    });
-});
+// // app.post for roommate is in authRoutes
+// //   // Create a new Roommate in the database
+// //   db.Roommate.create(req.body)
+// //     .then(function (dbRoommate) {
+// //       // If a Roommate was created successfully, find one House  and push the new Roommate's _id to the House's `Roommates` array
+// //       // { new: true } tells the query that we want it to return the updated Houses -- it returns the original by default
+// // //( this is mongoose code, need to change it to sequelize)
+// //       // return db.Houses.findOneAndUpdate({}, {
+// //       //   $push: {
+// //       //     Roommate: dbRoommate._id
+// //       //   }
+// //       // }, {
+// //       //   new: true
+// //       // });
+// //       res.json(dbRoommate)
+// //     })
+// //     .then(function (dbHouses) {
+// //       // If the House was updated successfully, send it back to the client
+// //       res.json(dbHouses);
+// //     })
+// //     .catch(function (err) {
+// //       // If an error occurs, send it back to the client
+// //       res.json(err);
+// //     });
+// });
 
 // Delete an example by id
 app.delete("/api/user/:id", function (req, res) {
