@@ -35,7 +35,7 @@ class ChoresModal extends React.Component {
     });
     }
 
-    handleInputChange  (chore) {
+    handleInputChange  (Chores) {
         const target ={ name, value } = this.target;
         this.setState({
             [name]: value

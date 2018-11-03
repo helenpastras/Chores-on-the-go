@@ -23,7 +23,7 @@ app.get("/populated", function(req, res) {
   // Using our Houses model, "find" every Houses in our db and populate them with any associated Roommate
   db.Houses.find({})
     // Specify that we want to populate the retrieved Houses with any associated Roommate
-    .populate("Roommate")
+    .populate("Roommates")
     .then(function(dbHouses) {
       // If any Houses are found, send them to the client with any associated Roommate
       res.json(dbHouses);
