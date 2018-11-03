@@ -1,8 +1,8 @@
-var db = require("../models");
-var express = require('express');
-var router = express.Router();
-var passport = require('passport');
-//var user = require('../models').User;
+const db = require("../models");
+const express = require('express');
+const router = express.Router();
+const passport = require('passport');
+// const user = require('../models').User;
 
 
 
@@ -18,7 +18,7 @@ router.post('/register', (req, res, next) => {
     console.log('hi from post to register');
     console.log(req.body);
     debugger;
-    db.Roommate.create({
+    db.Roommates.create({
         username: req.body.username,
         password: req.body.password,
         firstName: req.body.firstName,

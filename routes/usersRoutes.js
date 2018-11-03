@@ -6,11 +6,12 @@ const app = express.Router();
 //Limit view to users of the house
 
 // Get all Roomates:
-app.get("/api/user", function (req, res) {
-  db.User.findAll({
+app.get("/user", function (req, res) {
+  db.Roommate.findAll({
     where: {
       id: req.user.id,
-      HouseId: req.user.HouseId
+      HouseId: req.user.HouseId, 
+      include:[db.Houses]
     }
   }).then(function (roommateChores_db) {
     res.json(roommateChores_db);
@@ -44,7 +45,7 @@ app.get("/api/user", function (req, res) {
 // });
 
 // Delete an example by id
-app.delete("/api/user/:id", function (req, res) {
+app.delete("/user/:id", function (req, res) {
   db.Roommate.destroy({
     where: {
       id: req.user.id
