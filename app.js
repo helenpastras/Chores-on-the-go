@@ -2,10 +2,10 @@
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
-const bodyParser = require("body-parser");
+const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
-const passport = require("passport");
+const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 
 const indexRouter = require('./routes/index');
@@ -56,9 +56,9 @@ app.use(function(req, res, next) {
 });
 
  // set strategies and serializations
-passport.use(new LocalStrategy(db.Roommate.authenticate));
-passport.serializeUser(db.Roommate.serializeUser);
-passport.deserializeUser(db.Roommate.deserializeUser);
+passport.use(new LocalStrategy(db.Roommates.authenticate));
+passport.serializeUser(db.Roommates.serializeUser);
+passport.deserializeUser(db.Roommates.deserializeUser);
 
 // error handler
 app.use(function(err, req, res, next) {
