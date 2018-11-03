@@ -51,7 +51,7 @@ class Chores extends React.Component {
     }
 
     componentDidMount() {
-        axios.get('/auth/user').then(response => {
+        axios.get('/user').then(response => {
             console.log(response.data.user)
             if (!!response.data.user) {
                 console.log('THERE IS A USER')

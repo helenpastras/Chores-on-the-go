@@ -43,7 +43,7 @@ class ChoresModal extends React.Component {
     }
 
     componentDidMount() {
-        axios.get('/auth/user').then(response => {
+        axios.get('/user').then(response => {
             if (!!response.data.user) {
               console.log('THERE IS A USER')
               console.log(response.data.user.local.username)
