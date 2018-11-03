@@ -2,6 +2,7 @@
   "name": "chores-on-the-go",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:3000",
   "homepage": "https://helenpastras.github.io/Chores-on-the-go/",
   "dependencies": {
     "axios": "^0.18.0",
