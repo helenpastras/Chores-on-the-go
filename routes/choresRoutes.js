@@ -7,10 +7,10 @@ var Router = require('../routes');
 // Get all the Chores for the Roommate's House: 
 app.get("/chores", function (req, res) {
     db.Chores.findAll({
-        include: [db.Houses]
-        // where:{
-        //     HouseiD:req.params.id,
-        // }
+        // include: [db.Houses]
+        where:{
+            HouseiD:req.params.id,
+        }
     }).then(function (dbChores) {
         res.json(dbChores);
     });
