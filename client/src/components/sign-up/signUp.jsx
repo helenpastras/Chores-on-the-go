@@ -2,27 +2,27 @@
 
 
 //handleSubmit(chores){
- //   chores.preventDefault();
-  //  console.log('sign-up-form, username: ');
- //   console.log(this.state.username);
- //   axios.post('/'), {
-  //      username: this.state.username,
- //       password: this.state.password
-  //  }
- //   .then(response => {
- //       console.log(response);
- //       if (response.data) {
- //           console.log('successful SignUp');
-  //          this.setState({
- //               redirectTO: '/login'
-  //          })
-  //      } else {
- //           console.log('Sign-up error');
-  //      }
- //   }).catch(error => {
- //       console.log('sign up server error:');
-  //      console.log(error);
-  //  })
+//   chores.preventDefault();
+//  console.log('sign-up-form, username: ');
+//   console.log(this.state.username);
+//   axios.post('/'), {
+//      username: this.state.username,
+//       password: this.state.password
+//  }
+//   .then(response => {
+//       console.log(response);
+//       if (response.data) {
+//           console.log('successful SignUp');
+//          this.setState({
+//               redirectTO: '/login'
+//          })
+//      } else {
+//           console.log('Sign-up error');
+//      }
+//   }).catch(error => {
+//       console.log('sign up server error:');
+//      console.log(error);
+//  })
 //};
 
 import React, { Component } from 'react'
@@ -58,8 +58,8 @@ class SignupForm extends Component {
 			.post('/register', {
 				email: this.state.email,
 				username: this.state.username,
-				firstName: this.state.username,
-				houseName: this.state.username,
+				firstName: this.state.firstName,
+				houseName: this.state.houseName,
 				password: this.state.password
 			})
 			.then(response => {
@@ -82,31 +82,52 @@ class SignupForm extends Component {
 			<Container>
 				<Row>
 					<Col lg={{ size: 5, offset: 3 }}>
-							<input
-								type="text"
-								name="username"
-								placeholder="Username"
-								value={this.state.username}
-								onChange={this.handleChange}
-							/>
-							<input
-								type="password"
-								name="password"
-								placeholder="Password"
-								value={this.state.password}
-								onChange={this.handleChange}
-							/>
-							<input
-								type="password"
-								name="confirmPassword"
-								placeholder="Confirm Password"
-								value={this.state.confirmPassword}
-								onChange={this.handleChange}
-							/>
+						<input
+							type="text"
+							name="email"
+							placeholder="email"
+							value={this.state.email}
+							onChange={this.handleChange}
+						/>
+						<input
+							type="text"
+							name="username"
+							placeholder="Username"
+							value={this.state.username}
+							onChange={this.handleChange}
+						/>
+						<input
+							type="text"
+							name="firstName"
+							placeholder="First Name"
+							value={this.state.firstName}
+							onChange={this.handleChange}
+						/>
+						<input
+							type="text"
+							name="houseName"
+							placeholder="House Name"
+							value={this.state.houseName}
+							onChange={this.handleChange}
+						/>
+						<input
+							type="password"
+							name="password"
+							placeholder="Password"
+							value={this.state.password}
+							onChange={this.handleChange}
+						/>
+						<input
+							type="password"
+							name="confirmPassword"
+							placeholder="Confirm Password"
+							value={this.state.confirmPassword}
+							onChange={this.handleChange}
+						/>
 					</Col>
 				</Row>
 				<Row>
-					<Col lg={{ size: 4, offset: 4}}>
+					<Col lg={{ size: 4, offset: 4 }}>
 						<button onClick={this.handleSubmit}>Create Account</button>
 					</Col>
 				</Row>
@@ -114,9 +135,9 @@ class SignupForm extends Component {
 
 
 
-					)
-				}
-			}
-			
-			export default SignupForm;
+		)
+	}
+}
+
+export default SignupForm;
 
