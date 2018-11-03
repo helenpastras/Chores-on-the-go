@@ -65,7 +65,7 @@ class App extends Component {
   }
   
 	componentDidMount() {
-		axios.get('/user').then(response => {
+		axios.get('/api/user').then(response => {
 			console.log(response.data)
 			if (!!response.data.user) {
 				console.log('THERE IS A USER')

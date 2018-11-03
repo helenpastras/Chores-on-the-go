@@ -1,7 +1,7 @@
 require("dotenv").config();
 var express = require("express");
 var bodyParser = require("body-parser");
-var exphbs = require("express-handlebars");
+// var exphbs = require("express-handlebars");
 var passport = require("passport");
 var LocalStrategy = require('passport-local').Strategy;
 
@@ -23,9 +23,9 @@ app.use(passport.session());
 // Serve Static Files Middleware
 app.use(express.static("public"));
 
-// Handlebars
-app.engine( "handlebars", exphbs({ defaultLayout: "main" }));
-app.set("view engine", "handlebars");
+// // Handlebars
+// app.engine( "handlebars", exphbs({ defaultLayout: "main" }));
+// app.set("view engine", "handlebars");
 
 // Routes
 app.use(require("./routes/authRoutes"));
