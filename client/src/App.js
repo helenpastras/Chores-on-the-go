@@ -133,9 +133,10 @@ class App extends Component {
 		`
 
 		return (
+
 			<Container className="mainContainer">
 				<Jumbotron>
-				<img className="logoMain" src={logo} alt=""/>
+				{/* <img className="logoMain" src={logo} alt=""/> */}
 				<h2 className="welcomeText">Welcome to Chores On The Go!</h2>
 				<h5 className="welcomeText">Where You Can Manage Various Home Chores With Your Roommate</h5>
 					<Row className="buttonRow">
