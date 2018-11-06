@@ -1,5 +1,17 @@
 
 .chore-wrapper {
     display: flex;
+  
+   
     
+
 }
+.incompletecol {
+    font-color: white;
+}
+
+h1 {
+    font-color: white;
+
+}
+
