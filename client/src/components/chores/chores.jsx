@@ -5,7 +5,7 @@ import moment from "moment";
 //import deleteButton from "../../components/deleteButton";
 //import ChoresModal from "./ChoresModal";
 //import updateButton from "../../components/updateButton";
-import Chores from "./chores";
+import Chores from "../chores";
 import { Container, Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Label } from 'reactstrap'
 import "./chores.css";
 //import routes from "../components/routes"
@@ -25,18 +25,15 @@ class chores extends React.Component {
             chores: [],
             title: "",
             description: "",
-            startYear: "",
-            startMonth: "",
-            startDay: "",
-            startDate: "",
-            startTime: "",
-            endYear: "",
-            endMonth: "",
-            endDay: "",
-            endDate: "",
-            endTime: "",
+            dueDate: "",
             id: "",
-            user: null
+            assignee: 
+                <select>
+                    <option data-roommate-id= "1">Randy</option>,
+                    <option data-roommate-id= "2">Anna</option>,
+                    <option data-roommate-id= "6">Nick</option>,
+                    <option data-roommate-id= "7">Helen</option>
+                </select>
         };
         this.toggle = this.toggle.bind(this);
         this.toggleNested = this.toggleNested.bind(this);
@@ -109,14 +106,7 @@ class chores extends React.Component {
                 this.setState({
                     title: res.data.title,
                     description: res.data.description,
-                    startYear: makeStartDate[0],
-                    startMonth: makeStartDate[1],
-                    startDay: makeStartDate[2],
-                    endYear: makeEndDate[0],
-                    endMonth: makeEndDate[1],
-                    endDay: makeEndDate[2],
-                    startTime: makeStart[1],
-                    endTime: makeEnd[1],
+                    dueDate: makeStartDate[0],
                     id: res.data._id
                 })
             })

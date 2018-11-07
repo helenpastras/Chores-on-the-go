@@ -35,12 +35,12 @@ class ChoresModal extends React.Component {
     });
     }
 
-    handleInputChange  (Chores) {
-        const target ={ name, value } = this.target;
-        this.setState({
-            [name]: value
-        });
-    }
+    // handleInputChange  (Chores) {
+    //     const target ={ name, value } = this.target;
+    //     this.setState({
+    //         [name]: value
+    //     });
+    // }
 
     componentDidMount() {
         axios.get('/user').then(response => {
@@ -54,20 +54,20 @@ class ChoresModal extends React.Component {
         });       
     }
 
-    handleFormSubmit = event => {
-        Chores.preventDefault();
-        console.log("click")
-        console.log(this.state.user._id)
-        API.saveEvent({
-            title: this.state.title,
-            start: `${this.state.startYear}-${this.state.startMonth}-${this.state.startDate} ${this.state.startTime}`,
-           // end: `${this.state.endYear}-${this.state.endMonth}-${this.state.endDate} ${this.state.endTime}`,
-            description: this.state.description,
-            user: this.state.user._id
-        })
-            .catch(err => console.log(err));
+    // handleFormSubmit = event => {
+    //     Chores.preventDefault();
+    //     console.log("click")
+    //     console.log(this.state.user._id)
+    //     API.saveEvent({
+    //         title: this.state.title,
+    //         start: `${this.state.startYear}-${this.state.startMonth}-${this.state.startDate} ${this.state.startTime}`,
+    //        // end: `${this.state.endYear}-${this.state.endMonth}-${this.state.endDate} ${this.state.endTime}`,
+    //         description: this.state.description,
+    //         user: this.state.user._id
+    //     })
+    //         .catch(err => console.log(err));
             
-    }
+    // }
 
     searchDb = () => {
         API.gets()
