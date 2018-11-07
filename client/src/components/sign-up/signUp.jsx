@@ -1,30 +1,3 @@
-//import axios from 'axios';
-
-
-//handleSubmit(chores){
-//   chores.preventDefault();
-//  console.log('sign-up-form, username: ');
-//   console.log(this.state.username);
-//   axios.post('/'), {
-//      username: this.state.username,
-//       password: this.state.password
-//  }
-//   .then(response => {
-//       console.log(response);
-//       if (response.data) {
-//           console.log('successful SignUp');
-//          this.setState({
-//               redirectTO: '/login'
-//          })
-//      } else {
-//           console.log('Sign-up error');
-//      }
-//   }).catch(error => {
-//       console.log('sign up server error:');
-//      console.log(error);
-//  })
-//};
-
 import React, { Component } from 'react'
 import axios from 'axios'
 import { Redirect } from 'react-router-dom'
@@ -46,6 +19,30 @@ class SignupForm extends Component {
 		this.handleSubmit = this.handleSubmit.bind(this)
 		this.handleChange = this.handleChange.bind(this)
 	}
+
+	//handleSubmit(chores){
+	//   chores.preventDefault();
+	//  console.log('sign-up-form, username: ');
+	//   console.log(this.state.username);
+	//   axios.post('/'), {
+	//      username: this.state.username,
+	//       password: this.state.password
+	//  }
+	//   .then(response => {
+	//       console.log(response);
+	//       if (response.data) {
+	//           console.log('successful SignUp');
+	//          this.setState({
+	//               redirectTO: '/login'
+	//          })
+	//      } else {
+	//           console.log('Sign-up error');
+	//      }
+	//   }).catch(error => {
+	//       console.log('sign up server error:');
+	//      console.log(error);
+	//  })
+	//};
 	handleChange(chores) {
 		this.setState({
 			[chores.target.name]: chores.target.value
@@ -103,7 +100,22 @@ class SignupForm extends Component {
 							value={this.state.firstName}
 							onChange={this.handleChange}
 						/>
+						<label>
+							House Name:
+        					<select value={this.state.value} onChange={this.handleChange}>
+								{/* options={[
+									{ id: "1", label: "4414Kinross" },
+									{ id: "6", label: "14060Marquesas" },
+									{ id: "9", label: "123NewHouse" },
+								]} */}
+								<option value="1" data-id="1">4414Kinross</option>
+								<option value="6" data-id="6">14060Marquesas</option>
+							</select>
+						</label>
 						<input
+							// change input to select 
+							// import houseNames with the id to display on the dropdown select
+							// once selected, pass the id to the value
 							type="text"
 							name="houseName"
 							placeholder="House Name"

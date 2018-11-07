@@ -1,4 +1,8 @@
-.logo {
-    width: 20%;
-    margin-left: auto;
+
+.logoMain {
+    background-size: 50%;
+    width: 100%; 
+    margin: auto;
+    padding: auto; 
+    position: center;
 }

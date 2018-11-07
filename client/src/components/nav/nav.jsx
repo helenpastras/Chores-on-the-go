@@ -78,7 +78,7 @@ class Chores extends React.Component {
                 <BaseContainer style={{ background: '#2c3e50', color: '#FFF' }}>
                     <Router>
                         <SideNav highlightBgColor="#00bcd4">
-                            <img className="logo" src={logo} alt=""/>
+                            <img className="logo" src={logo} alt="hi"/>
                             <Title> Chores On The Go </Title>
                             <Hello user={this.checkLogIn()} />
                             <Nav id="chores">
