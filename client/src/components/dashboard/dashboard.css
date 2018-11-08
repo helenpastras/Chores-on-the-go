@@ -1,11 +1,8 @@
 
 .chore-wrapper {
     display: flex;
-  
-   
-    
-
 }
+
 .incompletecol {
     font-color: white;
 }
@@ -15,3 +12,6 @@ h1 {
 
 }
 
+.smooth-dnd-container{
+    margin: 0 auto;
+}

@@ -49,6 +49,7 @@
     "react-dom": "^16.6.0",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.0.5",
+    "react-trello": "^2.0.1",
     "reactstrap": "^6.5.0",
     "sequelize": "^4.41.0",
     "sequelize-cli": "^5.2.0",
