@@ -31,7 +31,6 @@ class chores extends React.Component {
                 <select>
                     <option data-roommate-id= "1">Randy</option>,
                     <option data-roommate-id= "2">Anna</option>,
-                    <option data-roommate-id= "6">Nick</option>,
                     <option data-roommate-id= "7">Helen</option>
                 </select>
         };

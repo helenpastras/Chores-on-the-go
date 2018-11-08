@@ -101,7 +101,7 @@ class SignupForm extends Component {
 							onChange={this.handleChange}
 						/>
 						<label>
-							House Name:
+							<h5>House Name:</h5>
         					<select value={this.state.value} onChange={this.handleChange}>
 								{/* options={[
 									{ id: "1", label: "4414Kinross" },
